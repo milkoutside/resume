@@ -1,0 +1,383 @@
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 992px;
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+// Убираем внутренние отступы
+ul[class], ol[class] {
+    padding: 0;
+}
+
+// Убираем внешние отступы
+body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
+    margin: 0;
+}
+
+// Выставляем основные настройки по-умолчанию для body
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+// Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class
+ul[class], ol[class] {
+    list-style: none;
+}
+
+// Элементы a, у которых нет класса, сбрасываем до дефолтных стилей
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+// Упрощаем работу с изображениями
+img {
+    max-width: 100%;
+    display: block;
+}
+
+// Указываем понятную периодичность в потоке данных у article
+article > * + * {
+    margin-top: 1em;
+}
+
+// Наследуем шрифты для инпутов и кнопок
+input, button, textarea, select {
+    font: inherit;
+}
+
+// Удаляем все анимации и переходы для людей, которые предпочитай их не использовать
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+}
+/* установить ширину и высоту скроллбара */
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+/* установить цвет и прозрачность скроллбара */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* установить прозрачность трека скроллбара */
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+header{
+    a{
+        text-decoration: none;
+        color:white;
+    }
+    margin-top:10px;
+    z-index: 1111;
+    font-size:25px;
+    font-weight: 700;
+    color: azure;
+    border-bottom: 1px solid rgba(21, 19, 19, 0.21);
+
+}
+.home-container{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.photo-container{
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+@media (max-width: $desktop) {
+    .photo-container{
+        margin: auto;
+    }
+
+}
+.photo-frame{
+    background: url('https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/570/c6a479fae8979bc9c1a02378e488e3ce06b52cb1.png');
+    display: inline-block;
+    position: absolute;
+    top: -26px;
+    left: -30px;
+    width: 360px;
+    height: 350px;
+    background-size: cover;
+    z-index: 2;
+    border-radius: 3px;
+}
+.photo {
+    background: url('https://indianka.me/wp-content/uploads/2020/12/SDC19460.jpg');
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    z-index: 1;
+    border-radius: 3px;
+}
+@media (max-width: $mobile) {
+    header{
+        font-size: 20px;
+        margin-left:15px ; margin-left:10px;
+    }
+
+}
+
+@media (min-width: $tablet) and (max-width: $desktop) {
+    header{
+        margin-left:10px;
+        font-size: 20px;
+    }
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+.resume-main-info{
+    border-radius: 10px;
+    background-color: rgba(79, 69, 69, 0.9);
+    width: 100%;
+    margin-bottom: 3%;
+    height: 300px;
+}
+.resume{
+    border-radius: 10px;
+    background-color: rgba(79, 69, 69, 0.9);
+    width: 100%;
+    margin-bottom: 3%;
+}
+.blog{
+    border-radius: 10px;
+    background-color: rgba(79, 69, 69, 0.9);
+    min-height: 70vh;
+    padding-bottom: 50px;
+
+}
+.publication{
+    border-radius: 5px;
+    background-color: rgba(30, 28, 28, 0.9);
+    min-height: 60px;
+    margin-bottom: 20px;
+}
+.make-comment{
+    input{
+        width: 100%;
+        border: none;
+        border-radius: 4px;
+        height: 35px;
+        background-color: rgba(159, 142, 142, 0.9);
+    }
+}
+::placeholder {
+    color: white;
+}
+.comments-container{
+    margin-left: 10%!important;
+    margin-bottom: 10px;
+}
+.comments{
+    border-radius: 5px;
+    background-color: rgba(54, 38, 38, 0.9);
+    min-height: 30px;
+}
+.login-body {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+    height: 50vh;
+}
+
+
+label {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    background-color: #f2f2f2;
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+.background-add{
+    border-radius: 8px;
+    display: inline-block;
+    background: #d57d7d;
+    padding: 6px;
+}
+.add-post-body{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 50%;
+    background-color: red;
+}
+textarea {
+    resize: none !important;
+    overflow: hidden !important;
+    height: auto !important;
+}
+.comment-form {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 24px;
+}
+.comment-textarea{
+    width: 100%;
+    span{
+
+    }
+}
+.comment-form textarea {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: rgba(30, 28, 28, 0.9);
+    color:white;
+    border-radius: 5px;
+    resize: none;
+    font-size: 18px;
+    height: 30px!important;
+    box-sizing: border-box;
+}
+
+.comment-form .comment-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.comment-input::placeholder {
+    color: white;
+}
+.comment-form .comment-buttons button {
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+.comment-form .comment-buttons button:hover {
+    background-color: #e0e0e0;
+}
+.input-name{
+    input{
+        display: inline-block;
+        width: 70%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: none;
+        background-color: rgba(30, 28, 28, 0.9);
+        font-size: 18px;
+        color: white;
+        height: 30px!important;
+        box-sizing: border-box;
+    }
+}
+.comment-actions{
+    justify-content: end;
+    display: flex;
+    button{
+        border-radius: 5px;
+        font-weight: 700;
+        margin-left:20px ;
+    }
+}
+.comment-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media (max-width:$mobile) {
+
+    .input-name {
+       input{
+           width: 100%!important;
+       }
+    }
+    .comment-textarea{
+        textarea{
+            width: auto;
+        }
+
+    }
+    .comment-actions{
+        justify-content: space-between;
+
+        button{
+            font-size: 10px;
+            margin:0;
+        }
+    }
+}

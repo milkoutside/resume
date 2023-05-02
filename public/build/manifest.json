@@ -1,0 +1,22 @@
+{
+  "resources/js/app.js": {
+    "file": "assets/app-f8788ed4.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/js/comment/commentApi.js": {
+    "file": "assets/commentApi-4ed993c7.js",
+    "isEntry": true,
+    "src": "resources/js/comment/commentApi.js"
+  },
+  "resources/js/comment/commentView.js": {
+    "file": "assets/commentView-4ed993c7.js",
+    "isEntry": true,
+    "src": "resources/js/comment/commentView.js"
+  },
+  "resources/scss/app.scss": {
+    "file": "assets/app-cd22d482.css",
+    "isEntry": true,
+    "src": "resources/scss/app.scss"
+  }
+}
